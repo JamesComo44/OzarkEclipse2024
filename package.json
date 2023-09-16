@@ -1,0 +1,39 @@
+{
+  "name": "ozarkeclipse2024",
+  "version": "1.0.0",
+  "description": "Static website for hosting Ozark Eclipse 2024 camping info",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JamesComo44/OzarkEclipse2024.git"
+  },
+  "keywords": [
+    "Ozark",
+    "Eclipse",
+    "2024",
+    "Camping",
+    "HTML",
+    "SASS",
+    "Javascript"
+  ],
+  "author": "James Como",
+  "license": "SEE LICENSE IN LICENSE.txt",
+  "bugs": {
+    "url": "https://github.com/JamesComo44/OzarkEclipse2024/issues"
+  },
+  "homepage": "https://jamescomo44.github.io/OzarkEclipse2024/",
+  "main": "index.html",
+  "scripts": {
+    "build": "npm-run-all --parallel build:*",
+    "build:sass": "sass --no-source-map assets/sass:assets/css",
+    "watch": "npm-run-all --parallel watch:*",
+    "watch:sass": "sass --watch assets/sass:assets/css",
+    "postbuild": "postcss assets/css/*.css -u autoprefixer cssnano -r --no-map"
+  },
+  "dependencies": {
+    "autoprefixer": "^10.4.15",
+    "cssnano": "^6.0.1",
+    "npm-run-all": "^4.1.5",
+    "postcss-cli": "^10.1.0",
+    "sass": "^1.67.0"
+  }
+}
